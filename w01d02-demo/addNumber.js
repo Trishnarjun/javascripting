@@ -1,12 +1,13 @@
-const addNumbers = function() {
-  const argus = process.argv
-  const newArry = argus.slice(2);
+const addNumbers = function(arr) {
   let counter = 0;
   for (let i = 0; i < newArry.length; i++) {  
     //adding the numbers
-    counter += Number(newArry[i]);
+    counter += Number(arr[i]);
     }
   // printing result 
   console.log(counter);
 };
-addNumbers();
+
+const argus = process.argv
+const newArry = argus.slice(2);
+addNumbers(newArry);
